@@ -1,0 +1,20 @@
+<ion-view title="Learning objectives" id="page3" style="">
+  <ion-content padding="true">
+      <div class="list">
+  <div id="joinRoom-markdown1" class="show-list-numbers-and-dots">
+    <p style="color:#000000; text-align:center;"><b>What are you currently struggling with in this course?</b></p>
+  </div>
+  <label class="item item-input">
+    <textarea placeholder="Type here" ng-model="textModel"></textarea>
+  </label>
+  <div id="joinRoom-markdown1" class="show-list-numbers-and-dots">
+    <p style="color:#000000; text-align:center;"><b>Do you have any comments or feedback for this app?</b></p>
+  </div>
+  <label class="item item-input">
+    <textarea placeholder="Type here" ng-model="feedbackModel"></textarea>
+  </label>
+  <a ui-sref="joinRoom" ng-click="uploadFeedback(feedbackModel, textModel)"  id="learningObjectives-button7" class="button button-positive  button-block">Send to teacher</a>
+</div>
+
+  </ion-content>
+</ion-view>

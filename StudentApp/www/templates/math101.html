@@ -1,0 +1,66 @@
+<ion-view title="Course" id="page2" style="">
+  <ion-content padding="true">
+    <button id="math101-button3" class="button button-balanced button-large button-block"  ng-click="tooFastClicked()"  ng-style="tooFast && {'background-color':'rgb(15,204,0)'} || {'background-color': 'rgb(135,206,250)'}">{{tooFastText}}</button>
+
+
+
+    </form>
+    <form class="list">
+      <ion-item class="item-divider" id="math101-list-item-divider1">Understanding</ion-item>
+      <div id="joinRoom-markdown1" class="show-list-numbers-and-dots">
+        <p style="color:#000000; text-align:center;"><b> How well do you understand the current topic?</b></p>
+      </div>
+      <div id="joinRoom-markdown1" class="show-list-numbers-and-dots">
+        <p ng-show="understanding == null"></p>
+        <p style="color:#000000;text-align:center;"> {{understanding}}</p>
+      </div>
+      <h5 id="math101-heading1" style="color: rgb(0, 0, 0);"></h5>
+
+      <ion-item class="range range-balanced" id="math101-range1">
+        <input ng-model="percentage" on-release=releaseUnderstanding(percentage) on-drag=dragUnderstanding(percentage) value="50" min="0" max="100" step="1" type="range" >{{percentage}}%
+      </ion-item>
+    </form>
+
+    <form id="math101-form2" class="list">
+      <ion-item class="item-divider background-balanced" id="math101-list-item-divider1">Motivation</ion-item>
+      <div id="joinRoom-markdown1" class="show-list-numbers-and-dots">
+        <p style="color:#000000; text-align:center;"><b>At this moment, how interested do you feel in the current topic?</b></p>
+      </div>
+      <div id="joinRoom-markdown1" class="show-list-numbers-and-dots">
+        <p ng-show="motivation == null"></p>
+        <p style="color:#000000;text-align:center;"> {{motivation}}</p>
+      </div>
+      <h5 id="math101-heading1" style="color: rgb(0, 0, 0);"></h5>
+      <ion-item class="range range-positive" id="math101-range1">
+        <input ng-model="percentage" on-release=releaseMotivation(percentage) on-drag=dragMotivation(percentage) value="50" min="0" max="100" step="1" type="range" >{{percentage}}%
+      </ion-item>
+
+    <form id="math101-form5" class="list">
+      <ion-item class="item-divider" id="math101-list-item-divider1">Confidence</ion-item>
+      <div id="joinRoom-markdown1" class="show-list-numbers-and-dots">
+        <p style="color:#000000; text-align:center;"><b> I currently feel confident participating verbally</b></p>
+      </div>
+      <div id="joinRoom-markdown1" class="show-list-numbers-and-dots">
+        <p style="color:#000000;text-align:center;"> {{confidence}}</p>
+      </div>
+      <ion-item class="range range-balanced" id="math101-range1">
+        <input ng-model="percentage" on-release=releaseConfidence(percentage) on-drag=dragConfidence(percentage) value="50" min="0" max="100" step="1" type="range" >{{percentage}}%
+      </ion-item>
+
+    </form>
+    <a ui-sref="learningObjectives" id="math101-button6" class="button button-calm  button-block icon-right ion-android-arrow-forward">End of lecture </a>
+  </ion-content>
+</ion-view>
+
+<script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC_AnIfaYJBIvtbDtcRVLUBI-bUiE_gPUs",
+    authDomain: "bach-b065e.firebaseapp.com",
+    databaseURL: "https://bach-b065e.firebaseio.com",
+    storageBucket: "bach-b065e.appspot.com",
+    messagingSenderId: "707820384230"
+  };
+  firebase.initializeApp(config);
+</script>

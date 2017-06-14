@@ -1,0 +1,35 @@
+<p ng-model="tooFast" ng-click="noteRequest()"><h3>Students Online: {{online}}</h3></p>
+<p><h3>Students prompting for a moment to take notes: {{tooFast}}</h3></p>
+<button id="math101-button3" class="button button-balanced button-large button-block"   ng-model="averages" ng-click="getAverages()"  ng-style="average && {'background-color':'rgb(153, 255, 153)'} || {'background-color': 'rgb(135,206,250)'}">{{averageText}}</button>
+<canvas id="bar" class="chart chart-bar"
+  chart-data="dataU" chart-labels="labelsU" chart-series="seriesU" chart-options="optionsU" chart-colors="colorsU" ng-show="!average" chart-dataset-override="datasetOverride">
+</canvas>
+<canvas id="bar" class="chart chart-bar"
+  chart-data="dataM" chart-labels="labelsM" chart-series="seriesM" chart-options="optionsM" chart-colors="colorsM", ng-show="!average" chart-dataset-override="datasetOverride">
+</canvas>
+<canvas id="bar" class="chart chart-bar"
+  chart-data="dataC" chart-labels="labelsC" chart-series="seriesC" chart-options="optionsC" chart-colors="colorsC" ng-show="!average" chart-dataset-override="datasetOverride">
+</canvas>
+<canvas id="base" class="chart-horizontal-bar"
+  chart-data="dataUnderstanding" chart-click="understanding" chart-labels="labelsUnderstanding" chart-options="optionsUnderstanding" chart-colors="colorsUnderstanding" ng-show="average">
+</canvas>
+<canvas id="base" class="chart-horizontal-bar"
+  chart-data="dataMotivation" chart-click="motivation" chart-labels="labelsMotivation" chart-options="optionsMotivation" chart-colors="colorsMotivation" ng-show="average">
+</canvas>
+<canvas id="base" class="chart-horizontal-bar"
+  chart-data="dataConfidence" chart-click="confidence" chart-labels="labelsConfidence" chart-options="optionsConfidence" chart-colors="colorsConfidence" ng-show="average">
+</canvas>
+
+
+
+
+
+
+
+<!--<canvas id="base" class="chart chart-line"
+  chart-data="dataLine" chart-click="understanding" chart-labels="labelsLine" chart-options="optionsLine" chart-colors="colors">
+</canvas>
+<canvas id="base" class="chart chart-doughnut"
+  chart-data="dataDoughnut" chart-click="understanding" chart-labels="labelsDoughnut" chart-options="optionsDoughnut" chart-colors="colors">
+</canvas>
+-->
